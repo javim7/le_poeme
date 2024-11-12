@@ -41,7 +41,7 @@ body {
 .card-content {
     width: 80vw;
     /* El ancho será el 80% del ancho de la ventana */
-    height: 36vh;
+    height: auto !important;
     /* La altura será el 60% de la altura de la ventana */
     max-width: 500px;
     /* Ancho máximo */
@@ -76,9 +76,45 @@ body {
     }
 }
 
+@media (max-width: 670px) {
+    .card-content {
+        width: 60vw !important;
+        /* Ancho ajustado para pantallas pequeñas */
+        height: auto !important;
+        /* Altura ajustada para pantallas pequeñas */
+    }
+
+    .card-poem {
+        font-size: 14px !important;
+        line-height: 1.2;
+    }
+
+    .card-date {
+        font-size: 13px !important;
+    }
+}
+
 @media (max-width: 610px) {
     .card-content {
-        width: 85vw;
+        width: 70vw !important  ;
+        /* Ancho ajustado para pantallas pequeñas */
+        height: auto !important;
+        /* Altura ajustada para pantallas pequeñas */
+    }
+
+    .card-poem {
+        font-size: 13px !important;
+        line-height: 1.2;
+    }
+
+    .card-date {
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width: 450px) {
+    .card-content {
+        width: 80vw !important  ;
         /* Ancho ajustado para pantallas pequeñas */
         height: auto !important;
         /* Altura ajustada para pantallas pequeñas */
