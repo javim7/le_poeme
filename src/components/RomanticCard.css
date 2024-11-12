@@ -1,0 +1,135 @@
+/* Asegúrate de que no haya márgenes ni rellenos en el body ni en el html */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    /* Asegura que la página ocupe el 100% de la altura de la ventana */
+    width: 100%;
+    overflow: hidden;
+    /* Evita que haya barras de desplazamiento en la página */
+    background-color: #f8e8e0;
+    /* Fondo del cuerpo */
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Ocupa toda la altura de la ventana */
+    width: 100%;
+    /* Asegura que ocupe todo el ancho */
+    padding: 0;
+    margin: 0;
+    background-image: url('path_to_your_image.jpg');
+    /* Agregar la imagen de fondo */
+    background-size: cover;
+    /* Asegura que el fondo cubra toda la pantalla */
+    background-position: center;
+    /* Centra el fondo */
+    overflow: hidden;
+    /* Evita cualquier desplazamiento */
+}
+
+.card-content {
+    width: 80vw;
+    /* El ancho será el 80% del ancho de la ventana */
+    height: 36vh;
+    /* La altura será el 60% de la altura de la ventana */
+    max-width: 500px;
+    /* Ancho máximo */
+    max-height: 500px;
+    /* Altura máxima */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
+    /* Evita que el contenido se desborde */
+}
+
+@media (max-width: 768px) {
+    .card-content {
+        width: 60vw !important;
+        /* Ancho ajustado para pantallas pequeñas */
+        height: auto !important;
+        /* Altura ajustada para pantallas pequeñas */
+    }
+
+    .card-poem {
+        font-size: 16px !important;
+        line-height: 1.2;
+    }
+
+    .card-date {
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 610px) {
+    .card-content {
+        width: 85vw;
+        /* Ancho ajustado para pantallas pequeñas */
+        height: auto !important;
+        /* Altura ajustada para pantallas pequeñas */
+    }
+
+    .card-poem {
+        font-size: 13px !important;
+        line-height: 1.2;
+    }
+
+    .card-date {
+        font-size: 12px !important;
+    }
+}
+
+.card-content:hover {
+    background-color: #f4d7cf;
+    transform: translateY(-5px);
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #b56576;
+    margin-bottom: 10px;
+}
+
+.card-date {
+    font-size: 14px;
+    color: #b56576;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.card-poem {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+.card-signature {
+    font-size: 16px;
+    color: #b56576;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.card-instruction {
+    font-size: 14px;
+    color: #b56576;
+    margin-top: 15px;
+    font-style: italic;
+}
